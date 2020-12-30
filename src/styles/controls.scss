@@ -1,0 +1,15 @@
+@import "material-theme";
+
+
+input, button {
+    font-size: 15px;
+    border: $primary solid 2px;
+}
+
+input {
+    padding: 0 10px;
+}
+
+button {
+    box-shadow: 5px 5px 0 0 rgba(0,0,0,1);
+}

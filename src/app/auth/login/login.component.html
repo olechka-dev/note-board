@@ -1,0 +1,8 @@
+<h1>Sign In</h1>
+<p>Please enter your username and password in order to proceed</p>
+<form [formGroup]="signInForm" (submit)="onSubmit()" autocomplete="off">
+    <input class="form-control" placeholder="Username" formControlName="username">
+    <input class="form-control" type="password" placeholder="Password" formControlName="password">
+    <button type="submit" class="form-control submit" [disabled]="!signInForm.valid">Sign In</button>
+    <div class="signin-error" *ngIf="signInForm.errors?.invalidCred">Wrong username or password</div>
+</form>
