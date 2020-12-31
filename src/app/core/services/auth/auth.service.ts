@@ -3,7 +3,7 @@ import { Observable, of, throwError } from 'rxjs';
 
 const MOCK_USER = {
     username: 'test',
-    password: 'qwerty'
+    password: 'qwerty#555'
 };
 
 const AUTH_KEY = 'auth-token';
@@ -16,9 +16,9 @@ export class AuthService {
     constructor() {
     }
 
-    signIn(username, password): Observable<boolean> {
+    signIn(username, password): Observable<boolean> { // simulates real authentication against server, that's why returns observable
         if (username === MOCK_USER.username && password === MOCK_USER.password) {
-            const token = btoa(username); // simulate token that suppose to be received from server
+            const token = btoa(username); // simulate token that is supposed to be received from server
             localStorage.setItem(AUTH_KEY, token);
             return of(true);
         }

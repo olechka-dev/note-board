@@ -1,1 +1,6 @@
-<p>board-container works!</p>
+<h1>Welcome to post board</h1>
+<div class="container">
+    <app-board-note (click)="openNoteModal()"></app-board-note>
+    <app-board-note *ngFor="let note of notes$ | async; trackBy: trackNotesById" [data]="note"
+                    (click)="openNoteModal(note)" (onDelete)="deleteItem($event)"></app-board-note>
+</div>

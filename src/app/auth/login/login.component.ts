@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    //changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.signInForm = this.fb.group({
-            username: ['', Validators.required],
-            password: ['', Validators.required]
+            username: ['', [Validators.required, Validators.pattern(/\S+/)]],
+            password: ['', [Validators.required, Validators.pattern(/\S+/)]]
         });
     }
 

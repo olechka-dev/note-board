@@ -1,7 +1,7 @@
 @import "material-theme";
 
 
-input, button {
+input, button, textarea {
     font-size: 15px;
     border: $primary solid 2px;
 }
@@ -11,5 +11,6 @@ input {
 }
 
 button {
+    background-color: $accent;
     box-shadow: 5px 5px 0 0 rgba(0,0,0,1);
 }

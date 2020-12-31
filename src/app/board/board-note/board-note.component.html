@@ -1,0 +1,12 @@
+<div class="note-container">
+    <mat-icon class="delete" *ngIf="data" (click)="deleteItem()">clear</mat-icon>
+    <div class="author">{{data?.author || 'Add new note...'}}</div>
+    <div class="note-text">{{data?.text}}</div>
+    <ng-container *ngIf="!data">
+        <div class="cross">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        <mat-icon class="add-note">add</mat-icon>
+    </ng-container>
+</div>

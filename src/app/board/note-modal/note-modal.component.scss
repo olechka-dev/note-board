@@ -1,0 +1,52 @@
+@import "material-theme";
+
+:host {
+    position: relative;
+    display: block;
+    height: 100%;
+
+    h3.title {
+        padding-left: 24px;
+        font-family: 'Merienda', cursive, sans-serif;
+        border-bottom: 2px black solid;
+
+    }
+
+    form.note-form {
+        margin: 0;
+        * {
+            display: block;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        .text {
+            resize: none;
+            padding: 5px 10px;
+        }
+        .text, .author {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+
+    .actions {
+        justify-content: flex-end;
+        padding: 8px 24px;
+        button {
+            width: 100px;
+            margin: 0 7px;
+        }
+    }
+
+    .footer {
+        border-top: 2px $primary solid;
+        height: 32px;
+        position: relative;
+        bottom: -32px;
+    }
+
+}
+
+
+

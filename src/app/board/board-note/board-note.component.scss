@@ -1,0 +1,82 @@
+@import "material-theme";
+
+:host {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+}
+
+.note-container {
+    border: $primary solid 2px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .delete {
+        position: relative;
+        float: right;
+        margin: 5px;
+    }
+    .author {
+        position: relative;
+        top: -20px;
+        background: white;
+        width: fit-content;
+        left: 10px;
+        height: 29px;
+        line-height: 29px;
+        padding: 0 8px;
+        max-width: 160px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .note-text {
+        margin: 0 18px 18px 18px;
+        max-height: 175px;
+        overflow: hidden;
+        text-overflow: clip;
+        line-height: 1.62;
+        overflow-wrap: anywhere;
+    }
+
+    .cross {
+        cursor: pointer;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .line1, .line2 {
+            width: 140px;
+            height: 59px;
+            border-bottom: 1px solid $primary;
+            position: absolute;
+
+        }
+        .line1 {
+            transform: rotate(45deg);
+        }
+        .line2 {
+            transform: rotate(-45deg);
+            left: -41px;
+            top: -1px;
+        }
+
+    }
+    .add-note {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50px;
+        width: 50px;
+        font-size: 50px;
+    }
+}

@@ -1,10 +1,7 @@
-@import "styles/material-theme";
 @import "styles/controls";
+@import "styles/modal";
 
 
-body {
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
 
 html {
     box-sizing: border-box;
@@ -16,12 +13,13 @@ html {
 *:after {
     box-sizing: inherit;
     outline: none;
+    font-family: 'Merienda', cursive, sans-serif;
 }
 
 html,
 body {
     margin: 0;
     height: 100%;
-    overflow: hidden;
     outline: none;
+    overflow: auto;
 }

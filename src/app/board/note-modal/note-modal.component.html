@@ -1,0 +1,12 @@
+<h3 class="title" mat-dialog-title>Post a new note</h3>
+<form class="note-form" mat-dialog-content [formGroup]="noteForm" autocomplete="off">
+    <label for="author">Author Name</label>
+    <input class="author" formControlName="author" id="author">
+    <label for="text">What would you like to say?</label>
+    <textarea class="text" rows="7" formControlName="text" id="text"></textarea>
+</form>
+<div class="actions" mat-dialog-actions>
+    <button mat-dialog-close>Cancel</button>
+    <button [mat-dialog-close]="noteForm.getRawValue()" [disabled]="!noteForm.valid">Post</button>
+</div>
+<div class="footer"></div>
